@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+<style>
+html { scroll-behavior: smooth; }
+body { margin: 0; padding: 0; background: #fff; color: #1a1a1a; font-family: 'Pretendard', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: #1a1a1a; }
+a:hover { color: #555; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(32px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+</helmet>
+
+<!-- Navigation -->
+<nav style="position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; backdrop-filter: blur(0px); opacity: 1; background-color: #FFFFFF00">
+  <a href="https://imreadytowork.vercel.app" style="font-size: 18px; font-weight: 700; letter-spacing: -0.3px; text-decoration: none; color: #000000">Soyoung Lee</a>
+  <div style="display: flex; gap: 40px">
+    
+    <a href="https://clairesoyounglee.github.io/imreadytowork/about.html" style="font-size: 15px; font-weight: 500; text-decoration: none; letter-spacing: 0px">ABOUT</a>
+    <a href="https://www.linkedin.com/in/clairesylee/" style="font-size: 15px; font-weight: 500; text-decoration: none; letter-spacing: 0px" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+</nav>
+
+<!-- Hero Image -->
+<div style="padding: 80px 0 0; max-width: 1400px; margin: 0 auto;">
+  <div style="width: 100%; aspect-ratio: 16/9; background: url(&quot;https://clairesoyounglee.github.io/imreadytowork/images/lf_besttab_01_title.png&quot;) center / cover no-repeat; height: 900px"></div>
+</div>
+
+<!-- Title + Description -->
+<div style="max-width: 860px; margin: 0 auto; padding: 72px 40px 0;">
+  <h1 style="font-size: 60px; font-weight: 600; letter-spacing: -1.2px; line-height: 1.3; margin: 0 0 32px">LFmall 베스트 개편</h1>
+  <p style="font-size: 17px; line-height: 1.85; color: #333; margin: 0 0 20px; letter-spacing: -0.3px; word-break: keep-all;">LFmall은 LF(LG Fashion)에서 전개하는 프리미엄 라이프 스타일 패션 이커머스 플랫폼입니다. 기존 베스트 페이지는 단일 랭킹 리스트 구조로, 다양한 카테고리의 상품이 하나의 순위에 혼재되어 있었습니다. 이를 고객 맥락에 맞는 복수의 큐레이션 구조로 재설계하여 페이지 내 상품 발견율과 구매 전환율을 향상시키는 것을 목표로, 본 프로젝트를 시작하였습니다.</p>
+</div>
+
+<!-- Metadata -->
+<div style="max-width: 860px; margin: 0 auto; padding: 56px 40px 0; display: flex; gap: 0; border-top: 1px solid #e5e5e5; border-style: none; padding-top: 32px">
+  <div style="flex: 1; padding: 24px 0">
+    <div style="font-size: 12px; font-weight: 600; color: #999; letter-spacing: 0.5px; margin-bottom: 8px;">Year</div>
+    <div style="font-size: 15px; font-weight: 500; letter-spacing: -0.2px;">2026</div>
+  </div>
+  <div style="flex: 1; padding: 24px 0">
+    <div style="font-size: 12px; font-weight: 600; color: #999; letter-spacing: 0.5px; margin-bottom: 8px;">Platform</div>
+    <div style="font-size: 15px; font-weight: 500; letter-spacing: -0.2px;">Mobile, PC</div>
+  </div>
+  <div style="flex: 1; padding: 24px 0">
+    <div style="font-size: 12px; font-weight: 600; color: #999; letter-spacing: 0.5px; margin-bottom: 8px;">Company</div>
+    <div style="font-size: 15px; font-weight: 500; letter-spacing: -0.2px;">LF</div>
+  </div>
+  <div style="flex: 1; padding: 24px 0">
+    <div style="font-size: 12px; font-weight: 600; color: #999; letter-spacing: 0.5px; margin-bottom: 8px;">Role</div>
+    <div style="font-size: 15px; font-weight: 500; letter-spacing: -0.2px;">Product Designer (100%)</div>
+  </div>
+</div>
+
+<!-- Section: 문제 발견 -->
+<div style="max-width: 1400px; margin: 0 auto; padding: 120px 0 0;">
+  <div style="width: 100%; aspect-ratio: 16/9; background: url(&quot;https://clairesoyounglee.github.io/imreadytowork/images/lf_besttab_02_problem.png&quot;) center / cover no-repeat; height: 900px"></div>
+</div>
+<div style="max-width: 860px; margin: 0 auto; padding: 64px 40px 0;">
+  <p style="font-size: 14px; font-weight: 400; color: #1A1A1A; letter-spacing: 0px; margin: 0 0 16px">문제 발견</p>
+  <h2 style="font-size: 30px; font-weight: 700; letter-spacing: 0px; line-height: 1.4; margin: 0 0 28px; word-break: keep-all">수동 필터에 의존하는&nbsp;탐색 경험</h2>
+  <p style="font-size: 17px; line-height: 1.85; color: #333; margin: 0 0 20px; letter-spacing: -0.3px; word-break: keep-all;"><span class="_animating_yu34g_10" data-newtext-seq="0">기존 페이지에도 </span><span class="_animating_yu34g_10" data-newtext-seq="9">연령별, 성별 드롭다운 필터가 존재했으나 성별 및 연령만으로 필터링되어</span><span class="_animating_yu34g_10" data-newtext-seq="55">, 고객의 행동에</span><span class="_animating_yu34g_10" data-newtext-seq="88">&nbsp;맞는 랭킹을 대응하지 못했습니다.&nbsp;</span><span class="_animating_yu34g_10" data-newtext-seq="129">또한 페이지 전체가 하나의 균일한 2열 그리드로 구성되어, 1위부터 </span><span class="_animating_yu34g_10" data-newtext-seq="167">하위 순위까지 시각적 차이가 없어, <br>탐색 목적이 </span><span class="_animating_yu34g_10" data-newtext-seq="197">"훑어보기"이든 "조건 맞춰 찾기"이든, 고객에게 제공되는 경험은 </span><span class="_animating_yu34g_10" data-newtext-seq="235">동일한 리스트 스크롤뿐이었습니다.</span></p>
+</div>
+
+<!-- Section: 문제 정의 -->
+<div style="max-width: 1400px; margin: 0 auto; padding: 120px 0 0;">
+  <div style="width: 100%; aspect-ratio: 16/9; background: url(&quot;https://clairesoyounglee.github.io/imreadytowork/images/lf_besttab_03_define.png&quot;) center / cover no-repeat; height: 900px"></div>
+</div>
+<div style="max-width: 860px; margin: 0 auto; padding: 64px 40px 0;">
+  <p style="font-size: 14px; font-weight: 400; color: #1a1a1a; letter-spacing: 0px; margin: 0 0 16px">문제 정의</p>
+  <h2 style="font-size: 30px; font-weight: 700; letter-spacing: 0px; line-height: 1.4; margin: 0 0 28px; word-break: keep-all">구조, 개인화, 설득력의 3가지 핵심 문제 도출</h2>
+  <p style="font-size: 17px; line-height: 1.85; color: #333; margin: 0 0 20px; letter-spacing: -0.3px; word-break: keep-all;">첫째, 100개 상품이 동일한 그리드에 나열되면 사용자는 여전히 선택에 압도된다 - 선택 과부하<br>둘째, 범용 랭킹은 개별 사용자의 취향과 무관하여 탐색 효율이 낮다 - 개인 관련성 부재<br>셋째, 순위라는 추상적 지표만으로는 상품을 신뢰하고 구매를 결정하기 어렵다 - 구매 근거 부족<br><br>이 세 가지 문제는 독립적이 아니라 연쇄적으로 작용하여, 페이지 체류 시간 저하와 이탈률 상승으로 이어질 것으로 정의했습니다.</p>
+</div>
+
+<!-- Section: 가설 수립 -->
+<div style="max-width: 1400px; margin: 0 auto; padding: 120px 0 0;">
+  <div style="width: 100%; aspect-ratio: 16/9; background: url(&quot;https://clairesoyounglee.github.io/imreadytowork/images/lf_besttab_04_hypothesis.png&quot;) center / cover no-repeat; height: 900px"></div>
+</div>
+<div style="max-width: 860px; margin: 0 auto; padding: 64px 40px 0;">
+  <p style="font-size: 14px; font-weight: 400; color: #1a1a1a; letter-spacing: 0px; margin: 0 0 16px">가설 수립</p>
+  <h2 style="font-size: 30px; font-weight: 700; letter-spacing: 0px; line-height: 1.4; margin: 0 0 28px; word-break: keep-all">탐색 효율과 구매 신뢰도 향상을 위한 가설</h2>
+
+  <!-- 가설 1 -->
+  <div style="padding: 36px 0; border-bottom: 1px solid #eee;">
+    <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 16px;">
+      <span style="font-size: 20px; font-weight: 700; color: #1a1a1a;">가설 1.</span>
+    </div>
+    <p style="font-size: 17px; line-height: 1.85; color: #333; margin: 0 0 16px; letter-spacing: -0.3px; word-break: keep-all;">베스트 상품을 하나의 평면적 리스트로 제공하지 않고, 역할이 다른 복수의 섹션으로 분리하면 사용자가 자신의 탐색 목적에 맞는 진입점을 빠르게 찾을 수 있을 것이다.</p>
+  </div>
+
+  <!-- 가설 2 -->
+  <div style="padding: 36px 0; border-bottom: 1px solid #eee;">
+    <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 16px;">
+      <span style="font-size: 20px; font-weight: 700; color: #1a1a1a;">가설 2.</span>
+    </div>
+    <p style="font-size: 17px; line-height: 1.85; color: #333; margin: 0 0 16px; letter-spacing: -0.3px; word-break: keep-all;">사용자의 성별, 연령, 브라우징 이력을 기반으로 개인화 수준을 점진적으로 높여 노출하면, 범용 랭킹 대비 상품 클릭률(CTR)과 체류 시간이 증가할 것이다.</p>
+  </div>
+
+  <!-- 가설 3 -->
+  <div style="padding: 36px 0">
+    <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 16px;">
+      <span style="font-size: 20px; font-weight: 700; color: #1a1a1a;">가설 3.</span>
+    </div>
+    <p style="font-size: 17px; line-height: 1.85; color: #333; margin: 0 0 16px; letter-spacing: -0.3px; word-break: keep-all; margin-bottom: 16px">순위 숫자에 더해 실시간 행동 데이터(조회수, 구매수, 순위 변동폭)를 함께 제공하면, 사용자의 상품 신뢰도가 높아지고 상세 페이지 전환율이 상승할 것이다.</p>
+  </div>
+</div>
+
+<!-- Section: 문제 해결 -->
+<div style="max-width: 860px; margin: 0 auto; padding: 64px 40px 0;">
+  <p style="font-size: 14px; font-weight: 400; color: #1a1a1a; letter-spacing: 0px; margin: 0 0 16px">고객 탐색 여정 분석</p>
+  <h2 style="font-size: 30px; font-weight: 700; letter-spacing: 0px; line-height: 1.4; margin: 0 0 36px; word-break: keep-all">고객 유형별 탐색 예상 경로</h2>
+
+  <!-- Flow A -->
+  <div style="padding: 28px 0; border-bottom: 1px solid #eee;">
+    <p style="font-size: 18px; font-weight: 700; color: #1a1a1a; margin: 0 0 8px; letter-spacing: -0.3px;">플로우 A : 큐레이션 탐색형</p>
+    <p style="font-size: 15px; color: #777; margin: 0 0 14px; letter-spacing: -0.2px;">"뭘 살지 모르겠지만 인기 있는 걸 보고 싶은" 고객</p>
+    <p style="font-size: 16px; line-height: 1.8; color: #333; margin: 0 0 10px; letter-spacing: -0.2px; word-break: keep-all;">1. 베스트 페이지 진입 → 2. BEST OF BEST 카테고리 칩 선택 → 3. 해당 카테고리 내 순위별 상품 좌우 스와이프 탐색 → 4. 관심 상품 탭 → 상품 상세 이동</p>
+    <p style="font-size: 15px; line-height: 1.8; color: #555; margin: 0; letter-spacing: -0.2px; word-break: keep-all;">분기: 칩 미선택 시 스크롤 다운 → 개인화 추천 섹션 노출 → 반응 또는 "다른 추천상품 더보기" 탭</p>
+  </div>
+
+  <!-- Flow B -->
+  <div style="padding: 28px 0; border-bottom: 1px solid #eee;">
+    <p style="font-size: 18px; font-weight: 700; color: #1a1a1a; margin: 0 0 8px; letter-spacing: -0.3px;">플로우 B : 개인화 반응형</p>
+    <p style="font-size: 15px; color: #777; margin: 0 0 14px; letter-spacing: -0.2px;">이전 브라우징 이력이 있는 재방문 고객</p>
+    <p style="font-size: 16px; line-height: 1.8; color: #333; margin: 0; letter-spacing: -0.2px; word-break: keep-all;">1. 진입 → 2. 스크롤 다운 → 3. "고객님이 눈여겨본 '아이템' BEST" 도달 → 4-1.&nbsp; 캐러셀 내 상품 탭 → 상세 이동 / 4-2. "다른 추천상품 더보기" 탭 → 갱신 → 재탐색</p>
+  </div>
+
+  <!-- Flow C -->
+  <div style="padding: 28px 0; border-bottom: 1px solid #eee;">
+    <p style="font-size: 18px; font-weight: 700; color: #1a1a1a; margin: 0 0 8px; letter-spacing: -0.3px;">플로우 C : 실시간 트렌드 확인형</p>
+    <p style="font-size: 15px; color: #777; margin: 0 0 14px; letter-spacing: -0.2px;">"지금 뭐가 뜨는지" 확인하려는 목적성 있는 고객</p>
+    <p style="font-size: 16px; line-height: 1.8; color: #333; margin: 0; letter-spacing: -0.2px; word-break: keep-all;">1. 진입 → 2. 스크롤 다운 → 3. "실시간 랭킹 급상승 상품" 도달 → 4. "급상승" 뱃지 또는 "27▲" 구체적 수치 확인 → 5. 관심 상품 탭 → 상세 이동</p>
+  </div>
+
+  <!-- Flow D -->
+  <div style="padding: 28px 0;">
+    <p style="font-size: 18px; font-weight: 700; color: #1a1a1a; margin: 0 0 8px; letter-spacing: -0.3px;">플로우 D : 필터 기반 목적 탐색형</p>
+    <p style="font-size: 15px; color: #777; margin: 0 0 14px; letter-spacing: -0.2px;">"여성 가방 중 지금 제일 잘 나가는 거"처럼 구체적 의도가 있는 고객</p>
+    <p style="font-size: 16px; line-height: 1.8; color: #333; margin: 0; letter-spacing: -0.2px; word-break: keep-all;">1. 진입 → 2. BEST TOP 100 영역 도달 (또는 플로팅 버튼 탭) → 3. 프로모션 필터 선택 → 4. 카테고리 탭 선택 → 5. 세부 조건 조정 → 6. 2열 그리드(1~10위) 탐색 → 7. 스크롤 시 3열 그리드(11위~) 전환 → 8. 상품 탭 → 상세 이동</p>
+  </div>
+</div><div style="max-width: 1400px; margin: 0 auto; padding: 120px 0 0;">
+  <div style="width: 100%; aspect-ratio: 16/9; background: url(&quot;https://clairesoyounglee.github.io/imreadytowork/images/lf_besttab_05_solution01.png&quot;) center / cover no-repeat; height: 900px"></div>
+</div>
+<div style="max-width: 860px; margin: 0 auto; padding: 64px 40px 0;">
+  <p style="font-size: 14px; font-weight: 400; color: #1a1a1a; letter-spacing: 0px; margin: 0 0 16px">문제 해결 1 - 가설 1 대응</p>
+  <h2 style="font-size: 30px; font-weight: 700; letter-spacing: 0px; line-height: 1.4; margin: 0 0 28px; word-break: keep-all">4개의 섹션 분리 구조로 레이아웃 차별화</h2>
+  <p style="font-size: 17px; line-height: 1.85; color: #333; margin: 0 0 20px; letter-spacing: -0.3px; word-break: keep-all;">단일 랭킹 리스트를 4개 섹션 (BEST OF BEST 큐레이션, 개인화 추천, 실시간 급상승, BEST TOP 100 필터 랭킹)으로 분리하여 사용자 유형별 진입점을 제공하였습니다. 각 섹션에 암묵적 → 명시적 → 제어 가능한 3단계 개인화를 적용하고, 순위, 급상승 뱃지, 실시간 조회수, 구매수 등 4가지 사회적 증거를 섹션 성격에 맞게 분산 배치하였습니다. 또한 각 섹션의 레이아웃 형태를 의도적으로 다르게 설계하여, 스크롤만으로 섹션 전환을 인지할 수 있게 하며 순위에 따라 레이아웃 자체도 가변(1~10위 2열, 11위~ 3열)하여 상위 상품에 시각적 자원이 집중되도록 하였습니다.</p>
+</div>
+
+<!-- Section: 솔루션 1. -->
+
+
+
+<!-- Section: 솔루션 2. -->
+<div style="max-width: 1400px; margin: 0 auto; padding: 120px 0 0;" data-om-label="1">
+  
+</div><div style="max-width: 1400px; margin: 0 auto; padding: 120px 0 0; background: #f2f2f2; padding-top: 113px; padding-bottom: 113px">
+  <div style="display: flex; gap: 40px; padding: 60px 97px; align-items: flex-start;">
+    <div style="flex: 1; aspect-ratio: 750/946; background: url(&quot;https://clairesoyounglee.github.io/imreadytowork/images/lf_besttab_05_solution01_img1.png&quot;) center / cover no-repeat"></div>
+    <div style="flex: 1; aspect-ratio: 750/946; background: url(&quot;https://clairesoyounglee.github.io/imreadytowork/images/lf_besttab_05_solution01_img2.png&quot;) center / cover no-repeat"></div>
+    <div style="flex: 1; aspect-ratio: 750/946; overflow: hidden;">
+      <video autoplay="" muted="" loop="" playsinline="" onended="this.currentTime=0;this.play();" style="width: 100%; height: 100%; object-fit: cover;">
+        <source src="./uploads/best.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</div>
+<div style="max-width: 1400px; margin: 0 auto; padding: 120px 0 0; padding-top: 40px">
+  <div style="width: 100%; aspect-ratio: 16/9; background: url(&quot;https://clairesoyounglee.github.io/imreadytowork/images/lf_besttab_07_solution03.png&quot;) center / cover no-repeat; height: 900px"></div>
+</div><div style="max-width: 860px; margin: 0 auto; padding: 64px 40px 0;">
+  <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 16px;">
+    <span style="font-size: 14px; font-weight: 400; color: #1a1a1a; letter-spacing: 0px">문제 해결 2 - 가설 2 대응</span>
+    
+  </div>
+  <h2 style="font-size: 30px; font-weight: 700; letter-spacing: 0px; line-height: 1.4; margin: 0 0 28px; word-break: keep-all">암묵적 개인화에서 제어 가능한 단계까지 제공</h2>
+
+  <!-- Step 1 -->
+  <div style="padding: 24px 0 24px; border-bottom: 1px solid #f0f0f0;">
+    <p style="font-size: 15px; font-weight: 700; color: #1a1a1a; margin: 0 0 10px; letter-spacing: -0.2px;">1단계 : 암묵적 개인화</p>
+    <p style="font-size: 17px; line-height: 1.85; color: #333; margin: 0; letter-spacing: -0.3px; word-break: keep-all;">BEST OF BEST의 카테고리 칩이 사용자 성별 및 연령대, 시즌 키워드에 맞춰 자동 구성되도록 로직 설계</p>
+  </div>
+
+  <!-- Step 2 -->
+  <div style="padding: 24px 0 24px; border-bottom: 1px solid #f0f0f0;">
+    <p style="font-size: 15px; font-weight: 700; color: #1a1a1a; margin: 0 0 10px; letter-spacing: -0.2px;">2단계 : 명시적 개인화</p>
+    <p style="font-size: 17px; line-height: 1.85; color: #333; margin: 0; letter-spacing: -0.3px; word-break: keep-all;">"고객님이 눈여겨본 '원피스' BEST" 섹션으로 개인화 적용 중임을 직접 고지, "다른 추천상품 더보기" 버튼으로 통제권 부여</p>
+  </div>
+
+  <!-- Step 3 -->
+  <div style="padding: 24px 0;">
+    <p style="font-size: 15px; font-weight: 700; color: #1a1a1a; margin: 0 0 10px; letter-spacing: -0.2px;">3단계 : 제어 가능한 개인화</p>
+    <p style="font-size: 17px; line-height: 1.85; color: #333; margin: 0; letter-spacing: -0.3px; word-break: keep-all;">BEST TOP 100 필터의 "여성, 30대" 기본값은 프로필 기반 자동 설정, 드롭다운으로 사용자가 직접 변경 가능</p>
+  </div>
+</div>
+
+<!-- Section: 솔루션 3. -->
+
+<div style="max-width: 860px; margin: 0 auto; padding: 64px 40px 0;">
+  <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 16px;">
+    <span style="font-size: 14px; font-weight: 400; color: #1a1a1a; letter-spacing: 0px">문제 해결 3. - 가설 3 대응</span>
+    
+  </div>
+  <h2 style="font-size: 30px; font-weight: 700; letter-spacing: 0px; line-height: 1.4; margin: 0 0 28px; word-break: keep-all">섹션 목적별 사회적 증거 분산 배치</h2>
+  <p style="font-size: 17px; line-height: 1.85; color: #333; margin: 0 0 32px; letter-spacing: -0.3px; word-break: keep-all;">사회적 증거의 유형을 섹션 성격에 맞게 선택적으로 배치하여 정보 과부하 없이 설득력을 확보하였습니다.</p>
+
+  <!-- Table -->
+  <div style="border: 1px solid #e5e5e5; border-radius: 0; overflow: hidden;">
+    <table style="width: 100%; border-collapse: collapse; font-size: 15px;">
+      <thead>
+        <tr style="background: #f7f7f7;">
+          <th style="text-align: left; padding: 14px 20px; font-weight: 600; border-bottom: 1px solid #e5e5e5; letter-spacing: -0.2px;">증거 유형</th>
+          <th style="text-align: left; padding: 14px 20px; font-weight: 600; border-bottom: 1px solid #e5e5e5; letter-spacing: -0.2px;">적용 섹션</th>
+          <th style="text-align: left; padding: 14px 20px; font-weight: 600; border-bottom: 1px solid #e5e5e5; letter-spacing: -0.2px;">설득 메커니즘</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 14px 20px; border-bottom: 1px solid #f0f0f0; color: #333;">순위 숫자</td>
+          <td style="padding: 14px 20px; border-bottom: 1px solid #f0f0f0; color: #333;">전 섹션 공통</td>
+          <td style="padding: 14px 20px; border-bottom: 1px solid #f0f0f0; color: #555;">검증된 인기 (Authority)</td>
+        </tr>
+        <tr>
+          <td style="padding: 14px 20px; border-bottom: 1px solid #f0f0f0; color: #333;">급상승 뱃지 / 순위 변동</td>
+          <td style="padding: 14px 20px; border-bottom: 1px solid #f0f0f0; color: #333;">실시간 랭킹 섹션 전용</td>
+          <td style="padding: 14px 20px; border-bottom: 1px solid #f0f0f0; color: #555;">지금 뜨고 있는 상품 (시의성)</td>
+        </tr>
+        <tr>
+          <td style="padding: 14px 20px; border-bottom: 1px solid #f0f0f0; color: #333;">실시간 조회/구매 수</td>
+          <td style="padding: 14px 20px; border-bottom: 1px solid #f0f0f0; color: #333;">BEST TOP 100 전용</td>
+          <td style="padding: 14px 20px; border-bottom: 1px solid #f0f0f0; color: #555;">다른 사람이 구매, 확인중 안내 (FOMO)</td>
+        </tr>
+        <tr>
+          
+          
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Section: 키 포인트 1 -->
+
+
+
+<!-- Section: 키 포인트 2 -->
+
+
+
+<!-- Section: 키 포인트 3 -->
+
+
+
+<!-- Section: 사용자 플로우 -->
+
+
+
+<!-- Section: 결과 -->
+<div style="max-width: 1400px; margin: 0 auto; padding: 120px 0 0;">
+  <div style="width: 100%; aspect-ratio: 16/9; background: url(&quot;https://clairesoyounglee.github.io/imreadytowork/images/lf_besttab_08_result.png&quot;) center / cover no-repeat; height: 900px"></div>
+</div>
+<div style="max-width: 860px; margin: 0 auto; padding: 64px 40px 0;">
+  <p style="font-size: 14px; font-weight: 400; color: #1a1a1a; letter-spacing: 0px; margin: 0 0 16px">결과</p>
+  <h2 style="font-size: 30px; font-weight: 700; letter-spacing: 0px; line-height: 1.4; margin: 0 0 28px; word-break: keep-all">PV +68.3%, 매출 +61.1% 상승</h2>
+  <p style="font-size: 17px; line-height: 1.85; color: #333; margin: 0 0 20px; letter-spacing: -0.3px; word-break: keep-all;">오픈 직전 2개월 대비 오픈 직후 2개월 기준, 일 평균 PV 중앙값이 약 2,600에서 약 4,370으로 +68.3% 상승하였으며, 같은 기간 매출 중앙값은 +61.1% 증가하였습니다. PV 순증분의 기여 구조를 분석하면, BEST OF BEST, 개인화 추천, 연관상품 영역이 분산 기여하되 순증분의 약 77%가 BEST OF BEST 및 개인화 추천 영역에 집중되어, 섹션 분리(가설 1)와 점진적 개인화(가설 2) 설계가 성과의 핵심 동인이었음을 뒷받침한다고 판단하였습니다.</p>
+</div>
+
+<!-- KPI Highlight Cards -->
+
+
+<!-- Footer: Credits -->
+
+
+<!-- Footer: Nav -->
+<div style="max-width: 860px; margin: 0 auto; padding: 80px 40px 80px; display: flex; justify-content: space-between; align-items: center; padding-top: 180px; padding-bottom: 120px; flex-direction: column">
+  <a href="#" style="text-decoration: none; font-size: 15px; color: #999; display: none">
+    <span style="font-size: 13px; display: block; margin-bottom: 6px;">← Next Project</span>
+    <span style="font-size: 18px; font-weight: 600; color: #1a1a1a;">다음 프로젝트</span>
+  </a>
+  <a href="https://clairesoyounglee.github.io/imreadytowork/lfmall_snapshop.html" style="text-decoration: none; font-size: 15px; color: #999; text-align: right;">
+    <span style="font-size: 13px; display: block; margin-bottom: 6px; color: #1a1a1a; text-align: center">Next Project →</span>
+    <span style="font-size: 18px; font-weight: 600; color: #1a1a1a; text-align: center">다음 프로젝트</span>
+  </a>
+</div>
+
+</x-dc>
+</body>
+</html>
