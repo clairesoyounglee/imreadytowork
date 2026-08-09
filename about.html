@@ -64,19 +64,6 @@ a:hover { color: #555; }
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
   renderVals() { return {}; }
-
-    const typeLine = () => {
-      const el = document.querySelector('[data-type-line="0"]');
-      if (!el) return;
-      if (charIdx <= lines[0].length) {
-        el.textContent = lines[0].slice(0, charIdx);
-        charIdx++;
-        setTimeout(typeLine, speed);
-      }
-    };
-    setTimeout(typeLine, 400);
-  }
-  renderVals() { return {}; }
 }
 </script>
 </body>
