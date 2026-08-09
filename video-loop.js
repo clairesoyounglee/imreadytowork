@@ -1,31 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
-  var videos = document.querySelectorAll('[data-loop-video]');
-  videos.forEach(function(v) {
-    v.muted = true;
-    v.setAttribute('muted', '');
-    v.setAttribute('playsinline', '');
-    v.loop = true;
-    
-    function tryPlay() {
-      var playPromise = v.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(function() {
-          setTimeout(tryPlay, 1000);
-        });
-      }
-    }
-    
-    v.addEventListener('ended', function() {
-      setTimeout(function() {
-        v.currentTime = 0;
-        v.play();
-      }, 800);
-    });
+  var video = document.getElementById('bestVideo');
+  if (!video) return;
 
-    if (v.readyState >= 2) {
-      tryPlay();
-    } else {
-      v.addEventListener('loadeddata', tryPlay);
-    }
-  });
+  video.muted = true;
+  video.setAttribute('muted', '');
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        video.play().catch(function(){});
+      } else {
+        video.pause();
+      }
+    });
+  }, { threshold: 0.3 });
+
+  observer.observe(video);
 });
