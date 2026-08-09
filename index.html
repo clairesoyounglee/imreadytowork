@@ -112,6 +112,7 @@ class Component extends DCLogic {
     const rows = document.querySelectorAll('[data-project-row]');
     rows.forEach(row => {
       const thumb = row.querySelector('[data-thumb]');
+      const link = row.querySelector('a');
       row.addEventListener('mouseenter', () => {
         if (thumb) {
           thumb.style.opacity = '1';
@@ -122,6 +123,11 @@ class Component extends DCLogic {
         if (thumb) {
           thumb.style.opacity = '0';
           thumb.style.transform = 'translate(-50%, -50%) scale(0.95)';
+        }
+      });
+      row.addEventListener('click', (e) => {
+        if (link && e.target.tagName !== 'A') {
+          window.location.href = link.href;
         }
       });
     });
