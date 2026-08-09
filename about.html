@@ -31,7 +31,7 @@ a:hover { color: #555; }
 
 <!-- Title -->
 <div style="max-width: 1400px; margin: 0 auto; padding: 160px 40px 0; padding-top: 130px">
-  <h1 data-type-line="0" style="font-size: 100px; font-weight: 700; letter-spacing: -1px; line-height: 1.35; margin: 0; min-height: 1.35em;"></h1>
+  <h1 style="font-size: 100px; font-weight: 700; letter-spacing: -1px; line-height: 1.35; margin: 0; position: static">About</h1>
 </div>
 
 <!-- Bio -->
@@ -63,13 +63,8 @@ a:hover { color: #555; }
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  componentDidMount() {
-    this._runTypewriter();
-  }
-  _runTypewriter() {
-    const lines = ["About"];
-    const speed = 45;
-    let charIdx = 0;
+  renderVals() { return {}; }
+
     const typeLine = () => {
       const el = document.querySelector('[data-type-line="0"]');
       if (!el) return;
